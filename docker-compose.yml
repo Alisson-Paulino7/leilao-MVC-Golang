@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password
+      MYSQL_DATABASE: go_app_db
+      MYSQL_USER: go_app_user
+      MYSQL_PASSWORD: go_app_password
+    ports:
+      - "3306:3306"
+    networks:
+      - go_app_network
+    volumes:
+      - ./mysql-scripts:/docker-entrypoint-initdb.d
+
+  pi-go_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./app:/app
+      - ./app:/go/src/app
+      - ./app:/usr/local/go/src/main
+      - ./app:/var/www/html
+
+    # - ./app:/go/src/app
+    # working_dir: /go/src/app
+    # command: go run main.go
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+    networks:
+      - go_app_network
+
+  pi-phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - mysql
+    environment:
+      - PMA_HOST=mysql
+      - PMA_USER=go_app_user
+      - PMA_PASSWORD=go_app_password
+    ports:
+      - 9090:80
+    restart: always
+    networks:
+      - go_app_network
+
+networks:
+  go_app_network:
+    driver: bridge

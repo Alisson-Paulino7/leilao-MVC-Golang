@@ -1,0 +1,15 @@
+name: PHP Psecio Security
+
+on: [push, pull_request]
+
+jobs:
+  check-syntax:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: PHP Psecio Parse Action
+      uses: umutphp/php-psecio-parse-action@v1
+
+# Esta ação usa a ferramenta Psecio Parse, que é uma ferramenta de verificação estática
+# para revisar seu código PHP em busca de possíveis problemas relacionados à segurança.
+            

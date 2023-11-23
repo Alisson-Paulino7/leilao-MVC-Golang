@@ -1,0 +1,12 @@
+name: PHP Magic Number
+
+on: [push, pull_request]
+
+jobs:
+  check-syntax:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: PHP Magic Number Check
+      uses: umutphp/php-magic-number-check-action@v2
+

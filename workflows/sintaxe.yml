@@ -1,0 +1,14 @@
+name: PHP Syntax Check
+
+on: [push, pull_request]
+
+jobs:
+  check-syntax:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: firehed/lint-php-action@v1
+
+    - name: Checando sintaxe PHP
+      run: find . -name "*.php" -exec php -l {} \;

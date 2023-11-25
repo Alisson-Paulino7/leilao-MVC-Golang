@@ -6,6 +6,7 @@ import (
 	"net/http"
 	"time"
 	"html/template"
+	"io/ioutil"
 	// "log"
 
 	"goapp/models"
@@ -90,6 +91,59 @@ func ValidarLogin(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func SalvarProduto(w http.ResponseWriter, r *http.Request) {
+
+	if r.Method == "POST" {
+
+		err := waitForMySQL()
+		if err != nil {
+			http.Error(w, "Erro ao aguardar o MySQL iniciar", http.StatusInternalServerError)
+			return
+		}
+
+        err = r.ParseMultipartForm(10 << 20)
+        if err != nil {
+            http.Error(w, "Erro ao analisar o formulário multipart", http.StatusInternalServerError)
+            return
+        }
+		nome_product := r.FormValue("Nome")
+		desc_product := r.FormValue("Descricao")
+		lance_product := r.FormValue("Lance")
+		tmp_expiracao := r.FormValue("TmpExpiracao")
+        file, _, err := r.FormFile("foto")
+        if err != nil {
+            http.Error(w, "Erro ao obter o arquivo do formulário", http.StatusInternalServerError)
+            return
+        }
+		// Atrasando o fechamento do arquivo apenas pra quando a função tiver retorno
+        defer file.Close()
+		
+		// Validando se tudo foi preenchido
+		if nome_product == "" || desc_product == "" || lance_product == "" || tmp_expiracao == "" {
+			http.Error(w, "Por favor, preencha todos os campos", http.StatusBadRequest)
+			return
+		}
+
+        foto, err := ioutil.ReadAll(file)
+        if err != nil {
+            http.Error(w, "Erro ao ler o conteúdo do arquivo", http.StatusInternalServerError)
+            return
+        }
+
+        usuario := models.Usuario{
+            Foto: foto,
+        }
+		// Método do models pra inserir os dados e tratar algum erro que tiver
+		err = usuario.EnviarFoto()
+		// checaErro(err)
+		if err != nil {
+			http.Error(w, "Erro ao enviar foto para o banco de dados", http.StatusInternalServerError)
+			return
+		}
+		http.Redirect(w, r, "/", http.StatusSeeOther)
+	}
+}
+
 func ListarProdutos(w http.ResponseWriter, r *http.Request) {
 
 	err := waitForMySQL()
@@ -143,10 +197,6 @@ if err != nil {
 	http.Error(w, "Erro ao executar o template HTML", http.StatusInternalServerError)
 	return
 }
-
-
-
-	
 
 }
 

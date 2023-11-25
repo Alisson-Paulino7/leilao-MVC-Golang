@@ -8,16 +8,34 @@
     <link rel="stylesheet" href="css/listaProdutos.css">
 </head>
 <body>
-    <h1>Lista de Produtos</h1>
-    <ul>
-        {{range .}}
-            <li>
-                <img src="data:image/png;base64,{{.FotoProduct}}" alt="Foto do Produto">
-                <strong>{{.Nome}}</strong> - 
-                R$ {{.LanceInicial}} - 
-                Expira em: {{.TmpExpiracao}} dias
-            </li>
-        {{end}}
-    </ul>
+    <div class="container">
+        <h1>Lista de Produtos</h1>
+        <div class="product-list">
+            <ul>
+                <div class="product-card">  
+                    {{range .}}
+                        <li>
+                            <div class="product-image">
+                                <img src="data:image/png;base64,{{.FotoProduct}}" alt="Foto do Produto">
+                            </div>
+                                <div class="product-title">
+                                    <strong>{{.Nome}}</strong>
+                                </div>
+                                    <div class="product-price">
+                                        R$ {{.LanceInicial}},00
+                                    </div>
+                                        <div class="product-end">
+                                            Expira em: {{.TmpExpiracao}} dias
+                                        </div>
+                            <div class="product-details">
+                                Descrição: {{.Descricao}}
+                            </div>
+                        </li>
+                    {{end}}
+                </div>
+                <a href="index.html">Volta por aqui</a>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

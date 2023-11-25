@@ -19,6 +19,10 @@ func main() {
 	}
 	defer db.Close()
 
+	// http.HandleFunc("/css/", func(w http.ResponseWriter, r *http.Request) {
+    //     http.ServeFile(w, r, "app/templates"+r.URL.Path)
+    // })
+
 	fs := http.FileServer(http.Dir("/app/templates"))
 	http.Handle("/", fs)
 

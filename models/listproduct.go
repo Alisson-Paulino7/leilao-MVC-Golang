@@ -3,16 +3,18 @@ package models
 import (
 	"database/sql"
 	"fmt"
+	"encoding/base64"
 
 	_ "github.com/go-sql-driver/mysql"
 )
 
 type Produto struct {
-	ID           int   `json:"id"`
-	Nome         string `json:"nome"`
-	LanceInicial float64 `json:"lance_inicial"`
-	TmpExpiracao int `json:"tmp_expiracao"`
-	FotoProduct  []byte `json:"foto_product"`
+	ID           int   		`json:"id"`
+	Nome         string 	`json:"nome"`
+	Descricao	 string 	`json:"descricao"`
+	LanceInicial float64 	`json:"lance_inicial"`
+	TmpExpiracao int 		`json:"tmp_expiracao"`
+	FotoProduct  string 	`json:"Foto_Product"`
 }
 
 // ListarProdutos retorna uma lista de todos os produtos cadastrados.
@@ -23,7 +25,7 @@ func ListarProdutos() ([]Produto, error) {
 	}
 	defer db.Close()
 
-	rows, err := db.Query("SELECT id, nome_product, lance_inicial, tmp_expiracao, foto_product FROM produtos")
+	rows, err := db.Query("SELECT * FROM produtos")
 	if err != nil {
 		return nil, fmt.Errorf("erro ao executar consulta: %v", err)
 	}
@@ -33,10 +35,12 @@ func ListarProdutos() ([]Produto, error) {
 	var produtos []Produto
 	for rows.Next() {
 		var produto Produto
-		err := rows.Scan(&produto.ID, &produto.Nome, &produto.LanceInicial, &produto.TmpExpiracao, &produto.FotoProduct)
+		err := rows.Scan(&produto.ID, &produto.Nome, &produto.Descricao, &produto.LanceInicial, &produto.TmpExpiracao, &produto.FotoProduct)
 		if err != nil {
 			return nil, fmt.Errorf("erro ao ler resultado: %v", err)
 		}
+		produto.FotoProduct = base64.StdEncoding.EncodeToString([]byte(produto.FotoProduct))
+
 		produtos = append(produtos, produto)
 	}
 

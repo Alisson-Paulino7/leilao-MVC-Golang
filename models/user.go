@@ -13,11 +13,12 @@ import (
 // Estrutura que fiz para o usuario
 
 type Usuario struct {
-	ID    int    `json:"id"`
-	Email string `json:"email"`
-	Senha string `json:"senha"`
-	Cpf string `json:"cpf"`
+	ID    int    	`json:"id"`
+	Email string 	`json:"email"`
+	Senha string 	`json:"senha"`
+	Cpf string 		`json:"cpf"`
 	Telefone string `json:"telefone"`
+	Foto[]byte 		`json:"foto"`
 }
 
 // Constante pra facilitar e não precisar fazer
@@ -78,6 +79,32 @@ func (u *Usuario) ValidarLogin() error {
 	err = bcrypt.CompareHashAndPassword([]byte(senha), []byte(u.Senha))
 	if err != nil {
 		return fmt.Errorf("senha inválida: %v", err)
+	}
+
+	return nil
+}
+
+func ( u *Usuario) EnviarFoto() error {
+	db, err := sql.Open("mysql", dsn)
+	if err != nil {
+		return fmt.Errorf("erro ao conectar ao banco de dados: %v", err)
+	}
+	defer db.Close()
+
+	result, err := db.Exec("UPDATE produtos SET foto_product = ? WHERE id = 2",
+		u.Foto)
+
+	if err != nil {
+		return fmt.Errorf("erro ao inserir foto no banco de dados: %v", err)
+	}
+
+	rowsAffected, err := result.RowsAffected()
+	if err != nil {
+		return fmt.Errorf("erro ao obter número de linhas afetadas: %v", err)
+	}
+
+	if rowsAffected == 0 {
+		return fmt.Errorf("nenhuma linha foi afetada pela inserção")
 	}
 
 	return nil

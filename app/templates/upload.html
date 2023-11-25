@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    .configinput{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin-bottom: 10px;
+    }
+
+</style>
+    
+</head>
+<body>
+    <h1>Upload de Arquivos</h1>
+    <form action="/SalvarProduto" method="POST" enctype="multipart/form-data">
+        <h3>PREENCHA SEUS DADOS</h3>
+        <div class="configinput">
+            <input type="text" name="Nome" placeholder="Nome do produto">
+            <input type="text" name="Descricao" placeholder="Descrição do produto">
+            <input type="number" name="Lance" pattern="\d+" placeholder="Lance inicial">
+            <input type="number" name="TmpExpiracao" pattern="\d+" placeholder="Contagem de dias para expiração">
+        </div>
+            <input type="file" name="foto" required>
+            <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

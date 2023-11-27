@@ -8,8 +8,37 @@
     <link rel="stylesheet" href="css/listaProdutos.css">
 </head>
 <body>
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="">
+        </a>
+    
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#planos">Quem somos</a>       
+            <a href="/listar">Produtos</a>
+            <a href="upload.html">Cadastrar produto</a>
+            <a href="#blogs">Links Úteis</a>
+        </nav>
+    
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="search here...">
+            <label for="search-box" class="fas fa-search"></label>
+        </div>
+    
+    
+    </header>
+    <div class="bgcardproduct">
+    
     <div class="container">
-        <h1>Lista de Produtos</h1>
+        <h1>Leilões ativos</h1>
         <div class="product-list">
             <ul>
                 <div class="product-card">  
@@ -33,9 +62,9 @@
                         </li>
                     {{end}}
                 </div>
-                <a href="index.html">Volta por aqui</a>
             </ul>
         </div>
     </div>
+</div>
 </body>
 </html>

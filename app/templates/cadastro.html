@@ -18,11 +18,10 @@
     </a>
 
     <nav class="navbar">
-        <a href="index.html">home</a>
-        <a href="#Sobre Nós">Sobre Nós</a>       
-        <a href="#projetos">Produtos</a>
-        <a href="#review">review</a>
-        <a href="#contato">contato</a>
+        <a href="index.html">Home</a>
+        <a href="#planos">Quem somos</a>       
+        <a href="/listar">Produtos</a>
+        <a href="upload.html">Cadastrar produto</a>
         <a href="#blogs">Links Úteis</a>
     </nav>
     <div class="search-form">
@@ -43,7 +42,7 @@
     <div class="row">
 
         
-        <form action="/cadastro" method="POST">
+        <form action="/cadastro" method="POST" enctype="multipart/form-data">
             <h3>PREENCHA SEUS DADOS</h3>
             
             <div class="inputBox">
@@ -59,12 +58,16 @@
                 <input type="password" name="confirma_senha" placeholder="CONFIRME SUA SENHA">
             </div>
             <div class="inputBox">
-                <span class="fas fa-file"></span>
+                <span class="fas fa-id-card"></span>
                 <input type="number" name="cpf" placeholder="CPF OU CNPJ" maxlength="14">
             </div>
             <div class="inputBox">
                 <span class="fas fa-phone"></span>
                 <input type="number" name="telefone" placeholder="TELEFONE">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-camera" ></span>
+                <input type="file" name="foto_perfil" placeholder="Selecione uma foto para o perfil" required>
             </div>
             <input type="submit" value="Cadastrar" class="btn">
             <button><a href="suporte.html"class="btn">Retornar a Tela de Login</a> </a></button>

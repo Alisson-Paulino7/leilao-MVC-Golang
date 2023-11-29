@@ -74,6 +74,23 @@ section{
     /* cor dentro do botão */
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.configinput{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
 .btn:hover{
     letter-spacing: .2rem;
 }
@@ -498,8 +515,6 @@ section{
     margin:.3rem;
     border-radius: 50%;
 }
-/*Botões github */
-
 
 .footer .share a:hover{
     background-color: var(--main-color);

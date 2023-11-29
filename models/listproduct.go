@@ -12,7 +12,7 @@ type Produto struct {
 	ID           int   		`json:"id"`
 	Nome         string 	`json:"nome"`
 	Descricao	 string 	`json:"descricao"`
-	LanceInicial float64 	`json:"lance_inicial"`
+	LanceInicial int 		`json:"lance_inicial"`
 	TmpExpiracao int 		`json:"tmp_expiracao"`
 	FotoProduct  string 	`json:"Foto_Product"`
 }

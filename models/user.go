@@ -84,28 +84,28 @@ func (u *Usuario) ValidarLogin() error {
 	return nil
 }
 
-func ( u *Usuario) EnviarFoto() error {
-	db, err := sql.Open("mysql", dsn)
-	if err != nil {
-		return fmt.Errorf("erro ao conectar ao banco de dados: %v", err)
-	}
-	defer db.Close()
+// func ( u *Usuario) EnviarFoto() error {
+// 	db, err := sql.Open("mysql", dsn)
+// 	if err != nil {
+// 		return fmt.Errorf("erro ao conectar ao banco de dados: %v", err)
+// 	}
+// 	defer db.Close()
 
-	result, err := db.Exec("UPDATE produtos SET foto_product = ? WHERE id = 2",
-		u.Foto)
+// 	result, err := db.Exec("UPDATE produtos SET foto_product = ? WHERE id = 2",
+// 		u.Foto)
 
-	if err != nil {
-		return fmt.Errorf("erro ao inserir foto no banco de dados: %v", err)
-	}
+// 	if err != nil {
+// 		return fmt.Errorf("erro ao inserir foto no banco de dados: %v", err)
+// 	}
 
-	rowsAffected, err := result.RowsAffected()
-	if err != nil {
-		return fmt.Errorf("erro ao obter número de linhas afetadas: %v", err)
-	}
+// 	rowsAffected, err := result.RowsAffected()
+// 	if err != nil {
+// 		return fmt.Errorf("erro ao obter número de linhas afetadas: %v", err)
+// 	}
 
-	if rowsAffected == 0 {
-		return fmt.Errorf("nenhuma linha foi afetada pela inserção")
-	}
+// 	if rowsAffected == 0 {
+// 		return fmt.Errorf("nenhuma linha foi afetada pela inserção")
+// 	}
 
-	return nil
-}
+// 	return nil
+// }

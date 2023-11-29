@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,5 +42,108 @@
     </form>
 
     <a href="index.html">Voltar à tela inicial</a>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/insertproduct.css">
+
+</head>
+<body>
+    
+<header class="header">
+
+    <a href="#" class="logo">
+        <img src="images/logo.png" alt="">
+    </a>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="#planos">Quem somos</a>       
+        <a href="/listar">Produtos</a>
+        <a href="upload.html">Cadastrar produto</a>
+        <a href="#blogs">Links Úteis</a>
+    </nav>
+
+    <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fas fa-search"></label>
+    </div>
+
+    
+</header>
+
+
+
+
+<section class="contato" id="contato">
+
+    <h1 class="heading"> <span>SOLICITE</span> CONTATO </h1>
+
+    <div class="row">
+
+        
+        <form action="/SalvarProduto" method="POST" enctype="multipart/form-data">
+            <h3 style="color: blueviolet">Cadastre seu produto</h3>
+                <div class="inputBox">
+                <span class="fas fa-folder-plus"></span>
+                <input type="text" name="Nome" placeholder="Nome do produto">
+            </div>
+            <div class="inputBox">
+                <span class="far fa-comment-alt"></span>
+                <input type="text" name="Descricao" placeholder="Descrição do produto">
+            </div>
+            <div class="inputBox">
+                <span class="fab fa-cc-paypal"></span>
+                <input type="number" name="Lance"  placeholder="Lance inicial">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-calendar-alt"></span>
+                <input type="number" name="TmpExpiracao"  placeholder="Contagem de dias para expiração" maxlength="14">
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-camera" ></span>
+                <input type="file" name="foto" placeholder="Foto do produto" required>
+            </div>
+            <input type="submit" value="Salvar produto" class="btn">
+            <button><a href="index.html"class="btn">Retornar para tela inicial</a></button>
+        </form>
+    </div>
+
+</section>
+
+
+
+
+
+<section class="footer">
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="https://www.linkedin.com/in/eduardo-sampaio-05b4ab247/" class="fab fa-github"></a>
+        <a href="https://www.instagram.com/du_sampaio/" class="fab fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/eduardo-sampaio-05b4ab247/" class="fab fa-linkedin"></a>
+    </div>
+
+    <div class="links">
+        <a href="#home">Home</a>
+        <a href="#planos">Planos</a>       
+        <a href="#projetos">Produtos</a>
+        <a href="#review">Review</a>
+        <a href="#contato">Contato</a>
+        <a href="#blogs">Links Úteis</a>
+    </div>
+
+    <div class="credit">created by <span>Eduardo Sampaio</span> | all rights reserved</div>
+
+</section>
+
 </body>
 </html>

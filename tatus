@@ -1,0 +1,29 @@
+[33mcommit faf446fa38d4bee80143d8cf9bf1874a434068c4[m[33m ([m[1;36mHEAD -> [m[1;32mfeat/CronometoDeExpiracao[m[33m, [m[1;31morigin/feat/CronometoDeExpiracao[m[33m)[m
+Author: Alisson <alisson.paulino@aluno.unifapce.edu.br>
+Date:   Wed Nov 29 14:57:27 2023 -0300
+
+    Inserido Cron. e melhorado design da lista de produto
+
+[33mcommit 75548833eb713e2de3cdef07a763f3ce11037518[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/improvement/design-insertproduct-listproduct[m[33m, [m[1;31morigin/dev[m[33m, [m[1;32mmaster[m[33m, [m[1;32mimprovement/design-insertproduct-listproduct[m[33m, [m[1;32mdev[m[33m)[m
+Author: Alisson <alisson.paulino@aluno.unifapce.edu.br>
+Date:   Wed Nov 29 09:20:44 2023 -0300
+
+    Melhoria do design da listagem de produtos e insert
+
+[33mcommit bcd4d831ecd2a1b1e357f97e698f78ee3842289c[m[33m ([m[1;31morigin/feat/InsertProduct[m[33m, [m[1;32mfeat/InsertProduct[m[33m)[m
+Author: Alisson <alisson.paulino@aluno.unifapce.edu.br>
+Date:   Mon Nov 27 15:09:17 2023 -0300
+
+    BasicFront + CompleteBack de insert de produto
+
+[33mcommit 648757b49376670174d9cf74dbafb756a499e2b7[m
+Author: Alisson <alisson.paulino@aluno.unifapce.edu.br>
+Date:   Sat Nov 25 15:15:26 2023 -0300
+
+    tela de inserção + listagem com foto corrigida
+
+[33mcommit dc366583e789e9050ed290ec0dc8d96ac956e08c[m
+Author: Alisson <alisson.paulino@aluno.unifapce.edu.br>
+Date:   Thu Nov 23 20:05:29 2023 -0300
+
+    cadastro+login+catálogo

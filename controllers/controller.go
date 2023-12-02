@@ -121,6 +121,14 @@ func SalvarProduto(w http.ResponseWriter, r *http.Request) {
 		// Convertendo o valor recebido do formulário para int
 		lance_productInt, err1 := strconv.Atoi(lance_product)
 		tmp_expiracaoInt, err2 := strconv.Atoi(tmp_expiracao)
+
+		// diasParaAdicionar := tmp_expiracaoInt
+		// dataAtual := time.Now()
+
+		// novaData := dataAtual.AddDate(0, 0, diasParaAdicionar)
+
+		// diferencaDias := novaData.Sub(dataAtual).Hours() / 24
+
 		checaErro(err1, err2)
 
 		foto, err := ioutil.ReadAll(file)
@@ -139,6 +147,8 @@ func SalvarProduto(w http.ResponseWriter, r *http.Request) {
 			Descricao: desc_product,
 			LanceInicial: lance_productInt,
 			TmpExpiracao: tmp_expiracaoInt,
+			// DataCadastro: dataAtual.Format("2006-01-02"),
+			// DataExpires: novaData.Format("2006-01-02"),
 			FotoProduct: foto,
 		}
 		// Método do models pra inserir os dados e tratar algum erro que tiver
@@ -206,6 +216,43 @@ func ListarProdutos(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
+}
+
+func UpdateLance(w http.ResponseWriter, r *http.Request) {
+	
+	
+	if r.Method == "POST" {
+
+		err := waitForMySQL()
+		if err != nil {
+			http.Error(w, "Erro ao aguardar o MySQL iniciar", http.StatusInternalServerError)
+			return
+		}
+
+		produtoID := r.FormValue("produtoID")
+		lance := r.FormValue("bidAmount")
+
+		if produtoID == ""{
+			http.Error(w, "Por favor, preencha id campos", http.StatusBadRequest)
+			return
+		}
+
+		produtoIDint, err1 := strconv.Atoi(produtoID)
+		Lanceint , err2 := strconv.Atoi(lance)
+		checaErro(err1, err2)
+
+		update := models.UpProduct{
+			Id: produtoIDint,
+			Novolance: Lanceint,
+		}
+
+		err = update.NovoLance()
+		if err != nil {
+			http.Error(w, "Erro ao atualizar lance no banco de dados", http.StatusInternalServerError)
+			return
+		}
+		http.Redirect(w, r, "/listar", http.StatusSeeOther)
+	}
 }
 
 func waitForMySQL() error {

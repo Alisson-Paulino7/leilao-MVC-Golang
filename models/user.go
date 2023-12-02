@@ -71,7 +71,7 @@ func (u *Usuario) ValidarLogin() error {
 	defer db.Close()
 
 	var senha string
-	err = db.QueryRow("SELECT senha FROM usuarios WHERE email = ?", u.Email).Scan(&senha)
+	err = db.QueryRow("SELECT id, senha FROM usuarios WHERE email = ?", u.Email).Scan(&senha)
 	if err != nil {
 		return fmt.Errorf("erro ao buscar usuário no banco de dados: %v", err)
 	}
@@ -80,6 +80,6 @@ func (u *Usuario) ValidarLogin() error {
 	if err != nil {
 		return fmt.Errorf("senha inválida: %v", err)
 	}
-
+	
 	return nil
 }

@@ -11,4 +11,5 @@ func CarregaRotas() {
 	http.HandleFunc("/cadastro", controllers.CadastrarUser)
 	http.HandleFunc("/listar", controllers.ListarProdutos)
 	http.HandleFunc("/SalvarProduto", controllers.SalvarProduto)
+	http.HandleFunc("/NewLance", controllers.UpdateLance)
 }

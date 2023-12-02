@@ -1,147 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SITE GATO NET</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="images/logo.png" alt="" />
+      </a>
 
-</head>
-<body>
-    
-<header class="header">
-
-    <a href="#" class="logo">
-        <img src="images/logo.png" alt="">
-    </a>
-
-    <nav class="navbar">
+      <nav class="navbar">
         <a href="index.html">Home</a>
-        <a href="#planos">Quem somos</a>       
+        <a href="#planos">Quem somos</a>
         <a href="/listar">Produtos</a>
         <a href="upload.html">Cadastrar produto</a>
         <a href="#blogs">Links Úteis</a>
-    </nav>
+      </nav>
 
-    <div class="icons">
+      <div class="icons">
         <div class="fas fa-search" id="search-btn"></div>
         <div class="fas fa-shopping-cart" id="cart-btn"></div>
         <div class="fas fa-bars" id="menu-btn"></div>
-    </div>
+      </div>
 
-    <div class="search-form">
-        <input type="search" id="search-box" placeholder="search here...">
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
         <label for="search-box" class="fas fa-search"></label>
-    </div>
+      </div>
+    </header>
 
-
-</header>
-
-<section class="home" id="home">
-
-    <div class="content">
+    <section class="home" id="home">
+      <div class="content">
         <h3>Quem Dá Mais?</h3>
         <p>Anuncie seus produtos que não utiliza mais</p>
         <a href="#" class="btn">Saiba mais...</a>
-    </div>
+      </div>
+    </section>
 
-</section>
+    <section class="projetos" id="projetos">
+      <h1 class="heading">Leilões <span>em andamento</span></h1>
 
-
-
-<section class="projetos" id="projetos">   
-    <h1 class="heading"> Leilões <span>em andamento</span> </h1>
-
-    <div class="box-container" >
+      <div class="box-container">
         {{range .}}
-        <div class="box" data-days-remaining="{{.TmpExpiracao}}" style="background-color: #fff; border-radius: 10px;">
-            <div class="icons">
-                <a href="/validalogin" class="fas fa-gavel" style="color: #D6AEFF; border: .1rem solid #D6AEFF; border-radius: 10px;"></a>  
-                <a href="#" class="fas fa-heart" style="color: #D6AEFF; border: .1rem solid #D6AEFF; border-radius: 10px;" ></a>
-                <a href="#" class="fas fa-eye" style="color: #D6AEFF; border: .1rem solid #D6AEFF; border-radius: 10px;"></a>
+        <div
+          class="box"
+          data-days-remaining="{{.TmpExpiracao}}"
+          style="background-color: #fff; border-radius: 10px"
+        >
+          <div class="icons">
+            <a
+              href="#"
+              class="fas fa-gavel"
+
+              style="
+                color: #d6aeff;
+                border: 0.1rem solid #d6aeff;
+                border-radius: 10px;
+              "
+            ></a>
+            <a
+              href="#"
+              class="fas fa-heart"
+              style="
+                color: #d6aeff;
+                border: 0.1rem solid #d6aeff;
+                border-radius: 10px;
+              "
+            ></a>
+            <a
+              href="#"
+              class="fas fa-eye"
+              style="
+                color: #d6aeff;
+                border: 0.1rem solid #d6aeff;
+                border-radius: 10px;
+              "
+            ></a>
+          </div>
+          <div class="image" style="object-fit: contain">
+            <img
+              src="data:image/png;base64,{{.FotoProduct}}"
+              alt="Foto do Produto"
+              style="width: 100%; border-radius: 10px"
+            />
+          </div>
+          <div class="content">
+            <h3 style="color: #000000; text-shadow: 1px 1px 1px #fff">
+              {{.Nome}}
+            </h3>
+            <div class="">
+              <h2>{{.Descricao}}</h2>
             </div>
-            <div class="image" style="object-fit: contain;">
-                <img src="data:image/png;base64,{{.FotoProduct}}" alt="Foto do Produto" style="width:100%; border-radius: 10px;">
+            <div class="price">Valor inicial: R$ {{.LanceInicial}},00 <br />
+            Lance atual: R${{.Lanceatual}},00
             </div>
-            <div class="content">
-                <h3 style="color: #000000; text-shadow: 1px 1px 1px #fff;">{{.Nome}}</h3>
-                <div class="">
-                    <h2>{{.Descricao}}</h2>
-                </div>
-              <div class="price">R$ {{.LanceInicial}},00 <br>
-              </div> 
-              <div style="font-size: 15px;"> 
-                <!-- Expira em: {{.TmpExpiracao}} dias -->
-                Expira em: <span class="countdown" style="font-size: 20px; white-space: nowrap; color: #e72f2f;"></span><br> ({{.TmpExpiracao}} dias)
+            <div style="font-size: 15px">
+              <!-- Expira em: {{.TmpExpiracao}} dias -->
+              Expira em:
+              <span
+                class="countdown"
+                style="font-size: 20px; white-space: nowrap; color: #e72f2f"
+              ></span
+              ><br />
+              ({{.TmpExpiracao}} dias)
             </div>
-            </div>
+          </div>
+          <button class="btnlance" onclick="openModal('{{.ID}}')">Dar lance</button>
+        </div>
+        <div id="myModal-{{.ID}}" class="modal">
+          <div class="modal-content">
+              <span class="spanla" onclick="closeModal('{{.ID}}')" style="color: #aaa; float: right; font-size: 28px; font-weight: bold; cursor: pointer; margin-bottom: 10px;">&times;</span>
+              <h2 style="margin-bottom: 10px;">Envie seu lance</h2>
+              <!-- Seu formulário aqui -->
+              <form id="bidForm-{{.ID}}" action="/NewLance" method="POST">
+                  <input type="hidden" name="produtoID" value="{{.ID}}">
+                  <input type="number" id="bidAmount" name="bidAmount" placeholder="Exemplo: R$100">
+                  <button type="button" onclick="submitBid('{{.ID}}')">Enviar Lance</button>
+              </form>
+          </div>
         </div>
         {{end}}
-    </div>
-</section>
+      </div>
 
-<section class="footer">
+    </section>
 
-    <div class="share">
+    <section class="footer">
+      <div class="share">
         <a href="#/" class="fab fa-facebook-f"></a>
-        <a href="https://www.linkedin.com/in/eduardo-sampaio-05b4ab247/" class="fab fa-github" target="_blank"></a> 
-        <a href="https://www.instagram.com/du_sampaio/" class="fab fa-instagram" target="_blank"></a>
-        <a href="https://www.linkedin.com/in/eduardo-sampaio-05b4ab247/" class="fab fa-linkedin" target="_blank"></a>
-    </div>
+        <a
+          href="https://www.linkedin.com/in/eduardo-sampaio-05b4ab247/"
+          class="fab fa-github"
+          target="_blank"
+        ></a>
+        <a
+          href="https://www.instagram.com/du_sampaio/"
+          class="fab fa-instagram"
+          target="_blank"
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/eduardo-sampaio-05b4ab247/"
+          class="fab fa-linkedin"
+          target="_blank"
+        ></a>
+      </div>
 
-    <div class="links">
+      <div class="links">
         <a href="#home">Home</a>
-        <a href="#planos">Planos</a>       
+        <a href="#planos">Planos</a>
         <a href="#projetos">Produtos</a>
         <a href="#review">Review</a>
         <a href="#contato">Contato</a>
         <a href="#blogs">Links Úteis</a>
-    </div>
+      </div>
 
-    <div class="credit">created by <span>Eduardo Sampaio</span> | all rights reserved</div>
+      <div class="credit">
+        created by <span>Eduardo Sampaio</span> | all rights reserved
+      </div>
+    </section>
 
-</section>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+        /* Estilo para o formulário modal */
+        .modal  {
+        font-family:'Roboto', sans-serif;
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+        padding-top: 60px;
+        }
 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Obtém todos os elementos com a classe "countdown"
-        var countdownElements = document.querySelectorAll('.countdown');
+        .btnlance {
+          font-family:'Roboto', sans-serif;
+          font-size: 2rem;
+          color: #fff;
+          border: 0.1rem solid #d6aeff;
+          border-radius: 10px; 
+          background-color: #00b4d8;
+          margin-top: 20px;
+          width: 150px;
+        }
 
-        // Para cada elemento encontrado, calcula o tempo restante e inicia o temporizador
-        countdownElements.forEach(function(countdownElement) {
-            // Obtenha o número de dias a partir do atributo de dados
-            var daysRemaining = parseInt(countdownElement.closest('.box').dataset.daysRemaining);
+        .modal-content {
+        background-color: #d6aeff;
+        margin: 5% auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: fit-content;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        }
 
-            // Converte os dias para segundos
-            var secondsRemaining = daysRemaining * 24 * 60 * 60;
+        .modal-content h2 {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        font-size: 2rem;
+        text-transform: uppercase;
+        color: #fff
+        }
 
-            // Atualiza o temporizador a cada segundo
-            var countdownInterval = setInterval(function() {
-                // Calcula horas, minutos e segundos
-                var hours = Math.floor(secondsRemaining / 3600);
-                var minutes = Math.floor((secondsRemaining % 3600) / 60);
-                var seconds = secondsRemaining % 60;
+        /* span {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        } */
 
-                // Formata a saída como HH:MM:SS
-                var formattedTime = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        span:hover,
+        span:focus {
+        color: #000;
+        text-decoration: none;
+        }
 
-                // Define o texto do elemento como o tempo formatado
-                countdownElement.textContent = formattedTime;
+        label {
+        display: block;
+        margin-bottom: 8px;
+        }
 
-                // Decrementa o tempo restante
-                secondsRemaining--;
+        input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        }
 
-                // Verifica se o tempo expirou
-                if (secondsRemaining < 0) {
-                    clearInterval(countdownInterval);
-                    countdownElement.textContent = "Tempo expirado";
-                }
-            }, 1000);
-        });
+        button {
+        background-color: #00b4d8;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+        button:hover {
+        background-color: #0077b6;
+        }
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        .configinput{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin-bottom: 10px;
+        }
+
+        /* Add some responsiveness */
+        @media screen and (max-width: 600px) {
+        .modal-content {
+            width: 90%;
+        }
+        }
+    </style>
+
+    <script>
+      // document.addEventListener("DOMContentLoaded", function () {
+
+      //   // Obtém todos os elementos com a classe "countdown"
+      //   var countdownElements = document.querySelectorAll(".countdown");
+
+      //   // Para cada elemento encontrado, calcula o tempo restante e inicia o temporizador
+      //   countdownElements.forEach(function (countdownElement) {
+      //     // Obtenha o número de dias a partir do atributo de dados
+      //     var daysRemaining = parseInt(
+      //       countdownElement.closest(".box").dataset.daysRemaining
+      //     );
+
+      //     // Converte os dias para segundos
+      //     var secondsRemaining = daysRemaining * 24 * 60 * 60;
+
+      //     // Atualiza o temporizador a cada segundo
+      //     var countdownInterval = setInterval(function () {
+      //       // Calcula horas, minutos e segundos
+      //       var hours = Math.floor(secondsRemaining / 3600);
+      //       var minutes = Math.floor((secondsRemaining % 3600) / 60);
+      //       var seconds = secondsRemaining % 60;
+
+      //       // Formata a saída como HH:MM:SS
+      //       var formattedTime = `${String(hours).padStart(2, "0")}:${String(
+      //         minutes
+      //       ).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+      //       // Define o texto do elemento como o tempo formatado
+      //       countdownElement.textContent = formattedTime;
+
+      //       // Decrementa o tempo restante
+      //       secondsRemaining--;
+
+      //       // Verifica se o tempo expirou
+      //       if (secondsRemaining < 0) {
+      //         clearInterval(countdownInterval);
+      //         countdownElement.textContent = "Tempo expirado";
+      //       }
+      //     }, 1000);
+      //   });
+      // });
+
+    document.addEventListener("DOMContentLoaded", function () {
+    // Obtém todos os elementos com a classe "countdown"
+    var countdownElements = document.querySelectorAll(".countdown");
+
+    // Para cada elemento encontrado, verifica se há uma data de expiração salva
+    countdownElements.forEach(function (countdownElement) {
+      var expirationDate = localStorage.getItem(`expirationDate_${countdownElement.closest(".box").dataset.daysRemaining}`);
+
+      if (expirationDate) {
+        // Calcula a diferença entre a data de expiração e a data atual
+        var timeDiff = new Date(expirationDate) - new Date();
+        var secondsRemaining = Math.floor(timeDiff / 1000);
+
+        // Atualiza o temporizador a cada segundo
+        var countdownInterval = setInterval(function () {
+          // Calcula horas, minutos e segundos
+          var hours = Math.floor(secondsRemaining / 3600);
+          var minutes = Math.floor((secondsRemaining % 3600) / 60);
+          var seconds = secondsRemaining % 60;
+
+          // Formata a saída como HH:MM:SS
+          var formattedTime = `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+
+          // Define o texto do elemento como o tempo formatado
+          countdownElement.textContent = formattedTime;
+
+          // Decrementa o tempo restante
+          secondsRemaining--;
+
+          // Verifica se o tempo expirou
+          if (secondsRemaining < 0) {
+            clearInterval(countdownInterval);
+            countdownElement.textContent = "Tempo expirado";
+          }
+        }, 1000);
+      } else {
+        // Se não houver data de expiração salva, configure uma nova
+        var currentDate = new Date();
+        var daysRemaining = parseInt(countdownElement.closest(".box").dataset.daysRemaining);
+        var expirationDate = new Date(currentDate.getTime() + daysRemaining * 24 * 60 * 60 * 1000);
+        localStorage.setItem(`expirationDate_${daysRemaining}`, expirationDate.toISOString());
+        // Reinicie o evento DOMContentLoaded para aplicar a lógica de contagem regressiva
+        location.reload();
+      }
     });
-</script>
+  });
 
-</body>
+      
+    function openModal(productID) {
+        var modal = document.getElementById("myModal-" + productID);
+        modal.style.display = "block";
+        // document.getElementById('myModal').style.display = 'block';
+    }
+
+    // Função para fechar o modal
+    // function spanmodalclose() {
+    //     document.getElementById('myModal-' + productID).style.display = 'none';
+    // }
+
+    function closeModal(productID) {
+          document.getElementById('myModal-' + productID).style.display = 'none';
+      }
+
+    // Função para enviar o lance
+    // function submitBid() {
+    //     document.getElementById('bidForm').submit();
+    //     alert('Lance enviado com sucesso!');
+    //     closeModal(); // Fechar o modal após o envio
+    // }
+
+    function submitBid(productID) {
+        document.getElementById('bidForm-' + productID).submit();
+        alert('Lance enviado com sucesso!');
+        closeModal(productID); // Fechar o modal específico após o envio
+    }
+
+    </script>
+  </body>
 </html>

@@ -12,5 +12,8 @@ CREATE TABLE IF NOT EXISTS produtos (
     desc_product VARCHAR(255) NOT NULL,
     lance_inicial INT(10) NOT NULL,
     tmp_expiracao INT NOT NULL,
+    -- data_cadastro DATE NOT NULL,
+    -- data_expires DATE NOT NULL,
+    lance_atual INT(10) NOT NULL DEFAULT 0,
     foto_product MEDIUMBLOB
 );

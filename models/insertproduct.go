@@ -13,6 +13,8 @@ type InsProduto struct {
 	Descricao	 string 	`json:"descricao"`
 	LanceInicial int 		`json:"lance_inicial"`
 	TmpExpiracao int 		`json:"tmp_expiracao"`
+	// DataCadastro string   	`json:"data_cadastro"`
+	// DataExpires string 		`json:"data_expires"`
 	FotoProduct  []byte 	`json:"Foto_Product"`
 }
 
@@ -26,7 +28,7 @@ func ( i *InsProduto) SalvarProduto() error {
 	defer db.Close()
 
 	result, err := db.Exec("insert into produtos(nome_product, desc_product, lance_inicial, tmp_expiracao, foto_product) VALUES (?, ?, ?, ?, ?)",
-		i. Nome, i.Descricao, i.LanceInicial, i.TmpExpiracao, i.FotoProduct)
+		i. Nome, i.Descricao, i.LanceInicial, i.TmpExpiracao,  i.FotoProduct)
 
 	if err != nil {
 		return fmt.Errorf("erro ao inserir foto no banco de dados: %v", err)

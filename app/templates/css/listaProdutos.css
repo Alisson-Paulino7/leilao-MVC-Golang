@@ -273,8 +273,9 @@ section{
 
 
 .projetos .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap:1.5rem;
 }
 

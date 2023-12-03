@@ -40,7 +40,7 @@
 <p>Além disso, é bom ter um editor para trabalhar com o código como <a href="https://code.visualstudio.com" target="_blank">VSCode</a>.</p>
 
 <!-- Rodando a aplicação (Servidor - Frontend + Backend + BD) -->
-<h1>🎲 Rodando a aplicação (Servidor - Frontend + Backend + BD)</h1>
+<h2>🎲 Rodando a aplicação (Servidor - Frontend + Backend + BD)</h2>
 
 <p>Crie uma pasta local utilizando o terminal:</p>
 <pre>$ mkdir nome_da_pasta</pre>

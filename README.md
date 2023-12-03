@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img alt="#" title="#MeuprojetoGoDocker" src="./app/templates/images/golang.png" width="200px"/>
+  <img alt="#" title="#MeuprojetoGoDocker" src="./app/templates/images/golang.png" width="800px"/>
 </h1>
 
 

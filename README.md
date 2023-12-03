@@ -30,7 +30,7 @@
 </h4>
 
 <!-- Pré-requisitos -->
-<h3>Pré-requisitos</h3>
+<h2>Pré-requisitos</h2>
 
 <p>Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:</p>
 <ul>
@@ -60,7 +60,7 @@
 <p>O servidor iniciará na porta 8080 - acesse <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>.</p>
 <p>Caso deseje visualizar a interface do PHPmyadmin para visualizar o banco - acesse <a href="http://localhost:9090" target="_blank">http://localhost:9090</a>.</p>
 
-<h3>🛠 Tecnologias</h3>
+<h2>🛠 Tecnologias</h2>
 
 <p>As seguintes ferramentas foram usadas na construção do projeto:</p>
 
@@ -85,7 +85,7 @@
     <li>LinkedIn: <a href="https://www.linkedin.com/in/alisson-paulino-3b903727a/">Alisson Paulino</a></li>
 </ul>
 
-<h3>Biografia</h3>
+<h2>Biografia</h2>
 
 <p style="font-color:#16A5F3;">Sou um desenvolvedor apaixonado por transformar ideias em soluções práticas e eficientes. Atualmente, estou embarcando em uma jornada estimulante como estagiário na NexTI, onde contribuo para o desenvolvimento de uma plataforma inovadora, focada no sistema de frequência de funcionários e na gestão unificada de estágios. Durante os últimos 10 meses, mergulhei em um ambiente presencial em Juazeiro do Norte, Ceará, aplicando metodologias ágeis como Scrum e utilizando tecnologias como JavaScript, HTML, CSS, MySQL, Docker, Django e Python. Além disso, aprimorei minhas habilidades com testes unitários para garantir a robustez do sistema. Além disso, mergulhando agora profundamente na linguagem GO, seus frameworks e novos conteúdos para desenvolver projetos de qualidade.
 </p>

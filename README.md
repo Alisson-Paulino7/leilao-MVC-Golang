@@ -13,6 +13,7 @@
 <img src="https://img.shields.io/static/v1?label=Javascript-F7DF1E&style=flat&logo=javascript"/>
 <img src="https://img.shields.io/static/v1?label=HTML&color=1572B6&style=flat&logo=html5"/>
 <img src="https://img.shields.io/static/v1?label=CSS&color=1572B6&style=flat&logo=css3"/>
+<img src="https://img.shields.io/badge/just%20the%20message-8A2BE2"/>
 
 <p align="center">
  <a href="#objetivo">Objetivo</a> •

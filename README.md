@@ -10,6 +10,7 @@
 <p>
 <img src="https://img.shields.io/static/v1?label=Golang&message=1.21.4&color=00ADD8&style=flat&logo=go"/>
 <img src="https://img.shields.io/static/v1?label=Docker&message=24.0.6&color=2496ED&style=flat&logo=docker"/>
+<img src="https://img.shields.io/static/v1?label=MySQL&message=8.0.31&color=4479A1&style=flat&logo=mysql"/>
 <img src="https://img.shields.io/badge/Javascript-F7DF1E?logo=javascript">
 <img src="https://img.shields.io/badge/HTML-E34F26?logo=html5">
 <img src="https://img.shields.io/badge/CSS-1572B6?logo=css3">
@@ -18,9 +19,9 @@
 
 <p align="center">
  <a href="#objetivo">Objetivo</a> •
- <a href="#roadmap">Roadmap</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
  <a href="#requisitos">Pré-requisitos</a> • 
+ <a href="#passos">Passo a passo</a> • 
  <a href="#autor">Autor</a>
 </p>
 
@@ -58,3 +59,17 @@
 
 <p>O servidor iniciará na porta 8080 - acesse <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>.</p>
 <p>Caso deseje visualizar a interface do PHPmyadmin para visualizar o banco - acesse <a href="http://localhost:9090" target="_blank">http://localhost:9090</a>.</p>
+
+<h3>🛠 Tecnologias</h3>
+
+<p>As seguintes ferramentas foram usadas na construção do projeto:</p>
+
+<ul>
+  <li><a href="https://git-scm.com" target="_blank">Git</a></li>
+  <li><a href="https://www.docker.com" target="_blank">Docker</a></li>
+  <li><a href="https://go.dev/dl/" target="_blank">Golang</a></li>
+  <li><a href="https://www.mysql.com" target="_blank">MySQL<a/></li>
+  <li><a href="#">HTML</li>
+  <li><a href="#">CSS</li>
+  <li><a href="#">JS</li>
+</ul>

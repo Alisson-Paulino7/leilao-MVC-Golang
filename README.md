@@ -2,7 +2,6 @@
   <img alt="#" title="#MeuprojetoGoDocker" src="./app/templates/images/golang.png" width="500px"/>
 </h1>
 
-
 <h1 align="center">
   Leilão - Quem dá mais?
 </h1>
@@ -55,10 +54,7 @@
 <p>Abra o Docker instalado na sua máquina.</p>
 
 <p>Execute o comando no CMD para buildar todo o projeto no docker:</p>
-<pre>$ docker-compose up --build</pre>
-<pre>ou</pre>
-<pre>$ docker-compose up --build -d</pre>
+<pre>$ docker-compose up --build ou docker-compose up --build -d</pre>
 
 <p>O servidor iniciará na porta 8080 - acesse <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>.</p>
 <p>Caso deseje visualizar a interface do PHPmyadmin para visualizar o banco - acesse <a href="http://localhost:9090" target="_blank">http://localhost:9090</a>.</p>
-

@@ -77,7 +77,7 @@
 
 <h2>Autor</h2>
 
-<img src="https://github.com/Alisson-Paulino7.png" alt="Foto do Autor">
+<img src="https://github.com/Alisson-Paulino7.png" alt="Foto do Autor" width="200" height="200">
 <p><strong>Alisson Paulino</strong></p>
 <ul>
     <li>GitHub: <a href="https://github.com/SeuNomeGitHub">SeuNomeGitHub</a></li>

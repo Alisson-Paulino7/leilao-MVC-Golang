@@ -8,13 +8,14 @@
 </h1>
 <p align="center">🚀Um site onde você pode divulgar um produto por um lance inicial e que as pessoas irão disputar para o adquirir</p>
 
-<img src="https://img.shields.io/static/v1?label=Golang&message=1.21.4&color=00ADD8&style=flat&logo=go"/><img src="https://img.shields.io/static/v1?label=Docker&message=24.0.6&color=2496ED&style=flat&logo=docker"/>
-<img src="https://img.shields.io/static/v1?label=Javascript-F7DF1E&style=flat&logo=javascript"/>
-<img src="https://img.shields.io/static/v1?label=HTML&color=1572B6&style=flat&logo=html5"/>
-<img src="https://img.shields.io/static/v1?label=CSS&color=1572B6&style=flat&logo=css3"/>
-<img src="https://img.shields.io/badge/JavaScript-F7DF1E"/>
-<img src="https://img.shields.io/badge/HTML-E34F26"/>
-<img src="https://img.shields.io/badge/CSS-1572B6"/>
+<p>
+<img src="https://img.shields.io/static/v1?label=Golang&message=1.21.4&color=00ADD8&style=flat&logo=go"/>
+<img src="https://img.shields.io/static/v1?label=Docker&message=24.0.6&color=2496ED&style=flat&logo=docker"/>
+<img src="https://img.shields.io/badge/JavaScript-F7DF1E&logo=javascript"/>
+<img src="https://img.shields.io/badge/HTML-E34F26&logo=html5"/>
+<img src="https://img.shields.io/badge/CSS-1572B6&logo=css3"/>	
+</p>
+
 
 <p align="center">
  <a href="#objetivo">Objetivo</a> •

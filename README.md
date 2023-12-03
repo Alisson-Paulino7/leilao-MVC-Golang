@@ -30,7 +30,7 @@
 </h4>
 
 <!-- Pré-requisitos -->
-<h2><i class="fa-thin fa-sliders" style="color: #ededed;"></i>Pré-requisitos</h2>
+<h2>⚙️ Pré-requisitos</h2>
 
 <p>Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:</p>
 <ul>
@@ -75,7 +75,7 @@
   <li><a href="#">Git</li>
 </ul>
 
-<h2>Autor</h2>
+<h2>👨🏽‍💻 Autor</h2>
 
 <img style="width: 170px; height: 170px; border-radius: 50%;" src="https://github.com/Alisson-Paulino7.png" alt="Foto do Autor">
 <h4><strong>Alisson Paulino</strong></h4>

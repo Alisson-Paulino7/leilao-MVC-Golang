@@ -14,6 +14,8 @@
 <img src="https://img.shields.io/static/v1?label=HTML&color=1572B6&style=flat&logo=html5"/>
 <img src="https://img.shields.io/static/v1?label=CSS&color=1572B6&style=flat&logo=css3"/>
 <img src="https://img.shields.io/badge/JavaScript-F7DF1E"/>
+<img src="https://img.shields.io/badge/HTML-E34F26"/>
+<img src="https://img.shields.io/badge/CSS-1572B6"/>
 
 <p align="center">
  <a href="#objetivo">Objetivo</a> •

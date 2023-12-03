@@ -12,10 +12,8 @@
 <img src="https://img.shields.io/static/v1?label=Golang&message=1.21.4&color=00ADD8&style=flat&logo=go"/>
 <img src="https://img.shields.io/static/v1?label=Docker&message=24.0.6&color=2496ED&style=flat&logo=docker"/>
 <img src="https://img.shields.io/badge/Javascript-F7DF1E?logo=javascript">
-<img src="https://img.shields.io/badge/HTML-E34F26&logo=html5"/>
-<img src="https://img.shields.io/badge/CSS-1572B6&logo=css3"/>
-<img src="https://img.shields.io/badge/javascript?logo=javascript&labelColor=F7DF1E">
-
+<img src="https://img.shields.io/badge/HTML-E34F26?logo=html5">
+<img src="https://img.shields.io/badge/CSS-1572B6?logo=css3">
 </p>
 
 
@@ -31,27 +29,36 @@
 	🚧  Back Golang 🚀 Em construção...  🚧
 </h4>
 
-### Pré-requisitos
+<!-- Pré-requisitos -->
+<h3>Pré-requisitos</h3>
 
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
-[Git](https://git-scm.com), [Docker](https://www.docker.com),[Golang](https://go.dev/dl/). 
-Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com)
+<p>Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:</p>
+<ul>
+  <li><a href="https://git-scm.com" target="_blank">Git</a></li>
+  <li><a href="https://www.docker.com" target="_blank">Docker</a></li>
+  <li><a href="https://go.dev/dl/" target="_blank">Golang</a></li>
+</ul>
+<p>Além disso, é bom ter um editor para trabalhar com o código como <a href="https://code.visualstudio.com" target="_blank">VSCode</a>.</p>
 
-### 🎲 Rodando a aplicação (Servidor - Frontend + Backend + BD)
+<!-- Rodando a aplicação (Servidor - Frontend + Backend + BD) -->
+<h1>🎲 Rodando a aplicação (Servidor - Frontend + Backend + BD)</h1>
 
-# Crie uma pasta local utilizando o terminal
-$ mkdir nome_da_pasta
+<p>Crie uma pasta local utilizando o terminal:</p>
+<pre>$ mkdir nome_da_pasta</pre>
 
-# Clone este repositório
-$ git clone <https://github.com/Alisson-Paulino7/leilao-MVC-Golang.git>
+<p>Clone este repositório:</p>
+<pre>$ git clone https://github.com/Alisson-Paulino7/leilao-MVC-Golang.git</pre>
 
-# Acesse a pasta do projeto no terminal/cmd
-$ cd caminho/do/seu/diretorio
+<p>Acesse a pasta do projeto no terminal/cmd:</p>
+<pre>$ cd caminho/do/seu/diretorio</pre>
 
-# Abra o Docker instalado na sua máquina
+<p>Abra o Docker instalado na sua máquina.</p>
 
-# Execute o comando no CMD para buildar todo o projeto no docker
-$  docker-compose up --build ou  docker-compose up --build -d
+<p>Execute o comando no CMD para buildar todo o projeto no docker:</p>
+<pre>$ docker-compose up --build</pre>
+<pre>ou</pre>
+<pre>$ docker-compose up --build -d</pre>
 
-# O servidor iniciará na porta:8080 - acesse <http://localhost:8080>
-# Caso deseje visualizar a interface do PHPmyadmin para visualizar o banco - acesse <http://localhost:9090>
+<p>O servidor iniciará na porta 8080 - acesse <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>.</p>
+<p>Caso deseje visualizar a interface do PHPmyadmin para visualizar o banco - acesse <a href="http://localhost:9090" target="_blank">http://localhost:9090</a>.</p>
+

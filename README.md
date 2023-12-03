@@ -30,7 +30,7 @@
 </h4>
 
 <!-- Pré-requisitos -->
-<h2>Pré-requisitos</h2>
+<h2><i class="fa-thin fa-sliders" style="color: #ededed;"></i>Pré-requisitos</h2>
 
 <p>Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:</p>
 <ul>

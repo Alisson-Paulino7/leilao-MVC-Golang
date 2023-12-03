@@ -10,9 +10,9 @@
 
 <img src="https://img.shields.io/static/v1?label=Golang&message=1.21.4&color=00ADD8&style=flat&logo=go"/>
 <img src="https://img.shields.io/static/v1?label=Docker&message=24.0.6&color=2496ED&style=flat&logo=docker"/>
-<img alt="Static Badge" src="https://img.shields.io/badge/Javascript?style=flat&logo=javascript&color=F7DF1E">
-<img alt="Static Badge" src="https://img.shields.io/badge/HTML?style=flat&logo=html5&color=1572B6">
-<img alt="Static Badge" src="https://img.shields.io/badge/CSS?style=flat&logo=css3&color=1572B6">
+<img src="https://img.shields.io/static/v1?label=Javascript&color=F7DF1E&style=flat&logo=javascript"/>
+<img src="https://img.shields.io/static/v1?label=HTML&color=1572B6&style=flat&logo=html5"/>
+<img src="https://img.shields.io/static/v1?label=CSS&color=1572B6&style=flat&logo=css3"/>
 
 <p align="center">
  <a href="#objetivo">Objetivo</a> •

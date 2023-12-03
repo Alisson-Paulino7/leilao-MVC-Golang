@@ -11,8 +11,7 @@
 <p>
 <img src="https://img.shields.io/static/v1?label=Golang&message=1.21.4&color=00ADD8&style=flat&logo=go"/>
 <img src="https://img.shields.io/static/v1?label=Docker&message=24.0.6&color=2496ED&style=flat&logo=docker"/>
-<img src="https://img.shields.io/badge/:badgeContent?logo=javascript&label=javascript&labelColor=F7DF1E">
-<img src="https://img.shields.io/static/v1?label=Javascript&labelcolor=F7DF1E&logo=javascript"/>
+<img src="https://img.shields.io/badge/javascript-F7DF1E?logo=javascript">
 <img src="https://img.shields.io/badge/HTML-E34F26&logo=html5"/>
 <img src="https://img.shields.io/badge/CSS-1572B6&logo=css3"/>
 <img src="https://img.shields.io/badge/javascript?logo=javascript&labelColor=F7DF1E">

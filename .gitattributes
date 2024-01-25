@@ -1,4 +1,4 @@
 $ cat .gitattributes
 *.html linguist-language=Go
-*.css linguist-language=SQL
+*.html linguist-language=html
 

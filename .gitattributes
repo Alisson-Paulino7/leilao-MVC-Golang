@@ -1,3 +1,2 @@
 $ cat .gitattributes
-*.html linguist-language=Go
 *.css linguist-language=Go
